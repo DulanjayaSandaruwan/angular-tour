@@ -3,6 +3,7 @@ import { RouterOutlet } from '@angular/router';
 import {MatCardModule} from '@angular/material/card';
 import { MatButtonModule } from '@angular/material/button';
 import { HomeComponent } from './home/home.component';
+import { CommonModule } from '@angular/common';
 
 @Component({
   selector: 'app-root',
@@ -11,11 +12,16 @@ import { HomeComponent } from './home/home.component';
     RouterOutlet,
     MatCardModule,
     MatButtonModule,
-    HomeComponent
+    HomeComponent,
+    CommonModule
   ],
   templateUrl: './app.component.html',
   styleUrl: './app.component.scss'
 })
 export class AppComponent {
-  title = 'angular-tour';
+  title = 'Angular 18 tour';
+  subTitle = 'Angular for beginners';
+  todayDate = new Date();
+  salary = '1000';
+  _obj = {"name": "Dulan"};
 }
